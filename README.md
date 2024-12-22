@@ -5,6 +5,7 @@
 - [hyprpaper](https://github.com/hyprwm/hyprpaper)
 - [hyprlock](https://github.com/hyprwm/hyprlock) not yet properly implemented
 - [waybar](https://github.com/Alexays/Waybar) with [my configuration](https://github.com/paulbknhs/waybar)
+- [rofi](https://github.com/davatorium/rofi) including custom applets from [adi1090x](https://github.com/adi1090x/rofi)
 
 ## Installation
 
