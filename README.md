@@ -9,7 +9,8 @@
 ## Installation
 
 > [!NOTE]
-> Since Hyprland creates a default configuration you need to exit hyprland first before cloning this repo
+> Since Hyprland creates a default configuration you
+> need to exit hyprland first before cloning this repo
 
 ```bash
 # Install Hyprland and co
@@ -19,5 +20,6 @@ sudo pacman -S hyprland waybar hyprpaper
 sudo pacman -S kitty firefox thunar
 
 # Backup existing configuration and clone the repository
-mv ~/.config/hypr ~/.config/hypr.bak && git clone https://github.com/paulbknhs/hypr ~/.config/hypr
+mv ~/.config/hypr ~/.config/hypr.bak
+git clone https://github.com/paulbknhs/hypr ~/.config/hypr
 ```
