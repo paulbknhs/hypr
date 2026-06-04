@@ -9,13 +9,7 @@ hl.config({
 		no_hardware_cursors = true,
 	},
 })
-hl.config({
-	ecosystem = {
-		no_update_news = true,
-	},
-})
-
-local config_dir = "~/.config/hypr"
+hl.config({})
 
 hl.monitor({
 	output = "HDMI-A-1",
@@ -38,12 +32,6 @@ hl.monitor({
 	scale = 1,
 })
 
--- exec-once = dunst
-
--- exec-once = waybar & hyprpaper
-
--- exec-once = avizo-service
-
 hl.env("XCURSOR_SIZE", 24)
 
 hl.env("HYPRCURSOR_SIZE", 24)
@@ -61,9 +49,6 @@ hl.config({
 		allow_tearing = false,
 		layout = "master",
 	},
-})
-
-hl.config({
 	decoration = {
 		rounding = 2,
 		active_opacity = 1.0,
@@ -81,35 +66,20 @@ hl.config({
 			vibrancy = 0.1696,
 		},
 	},
-})
-
-hl.config({
 	animations = {
 		enabled = true,
 	},
-})
-
-hl.config({
 	dwindle = {
 		-- pseudotile = true
 		preserve_split = true,
 	},
-})
-
-hl.config({
 	master = {
 		new_status = "master",
 	},
-})
-
-hl.config({
 	misc = {
 		force_default_wallpaper = 0,
 		disable_hyprland_logo = false,
 	},
-})
-
-hl.config({
 	input = {
 		kb_layout = "de",
 		kb_options = "caps:swapescape",
