@@ -115,6 +115,7 @@ hl.device({
 require("custom.keybindings")
 require("custom.rules")
 require("custom.noctalia")
+require("custom.animations")
 -- source = ~/.config/hypr/custom/rules.conf -> requires manual conversion
 -- local rules = require("rules")
 -- TODO: convert ~/.config/hypr/custom/rules.conf to .lua and use require()
@@ -125,7 +126,7 @@ require("custom.noctalia")
 
 -- Autostart
 hl.on("hyprland.start", function()
-	hl.exec_cmd("qs -c noctalia-shell")
+	hl.exec_cmd("noctalia")
 	hl.exec_cmd("/usr/local/bin/dl-sort")
 	hl.exec_cmd("hyprpaper")
 	hl.exec_cmd("demonsend start")

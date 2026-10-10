@@ -6,149 +6,84 @@
 
 local mainMod = "SUPER"
 hl.bind("SUPER" .. " + " .. "V", hl.dsp.exec_cmd("cliphist list| rofi -dmenu| cliphist decode| wl-copy"))
-
 local terminal = "kitty"
-
 local browser = "firefox"
-
 local fileManager = "thunar"
-
 local sudoFileManager = "sudo thunar"
-
 local menu = "~/.config/hypr/launcher_t3"
-
 local screenshot = "/home/paul/.config/rofi/applets/bin/screenshot.sh"
-
 local exit = "/home/paul/.config/rofi/applets/bin/powermenu.sh"
 
 -- fullscreen hyprland
-
 hl.bind(mainMod .. " + " .. "F", hl.dsp.window.fullscreen())
-
 hl.bind(mainMod .. " + " .. "R", hl.dsp.exec_cmd("hyprctl reload"))
-
 hl.bind(mainMod .. " + SHIFT " .. " + " .. "N", hl.dsp.exec_cmd("kitty nmtui"))
-
 hl.bind(mainMod .. " + SHIFT " .. " + " .. "D", hl.dsp.exec_cmd("vesktop"))
-
 hl.bind(mainMod .. " + " .. "SPACE", hl.dsp.exec_cmd("/home/paul/projects/rofi-greek/greek.sh"))
 
 -- bind = mainMod SHIFT, Q, exec, /home/paul/.config/rofi/applets/bin/powermenu.sh
-
 hl.bind("XF86Calculator", hl.dsp.exec_cmd("kitty python3"))
 
 -- default Hyprland
-
-hl.bind(mainMod .. " + " .. "RETURN", hl.dsp.exec_cmd(terminal))
-
-hl.bind(mainMod .. " + " .. "B", hl.dsp.exec_cmd(browser))
-
-hl.bind(mainMod .. " + " .. "E", hl.dsp.exec_cmd(fileManager))
-
-hl.bind(mainMod .. " + " .. "N", hl.dsp.exec_cmd("neovide"))
-
-hl.bind(mainMod .. " + " .. "Q", hl.dsp.window.close())
-
-hl.bind(mainMod .. " + " .. "SHIFT + E", hl.dsp.exec_cmd("sudoFileManager"))
-
-hl.bind(mainMod .. " + " .. "C", hl.dsp.window.float())
+hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(terminal))
+hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
+hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
+hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("neovide"))
+hl.bind(mainMod .. " + Q", hl.dsp.window.close())
+hl.bind(mainMod .. " + SHIFT + E", hl.dsp.exec_cmd("sudoFileManager"))
+hl.bind(mainMod .. " + C", hl.dsp.window.float())
+hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("noctalia msg panel-toggle launcher"))
+hl.bind(mainMod .. " + SHIFT + L", hl.dsp.exec_cmd("noctalia msg session lock"))
+hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.exec_cmd("noctalia msg panel-toggle session"))
 
 -- bind = mainMod, D, exec, $menu
-
-hl.bind(mainMod .. " + " .. "h", hl.dsp.focus({ direction = "left" }))
-
-hl.bind(mainMod .. " + " .. "l", hl.dsp.focus({ direction = "right" }))
-
-hl.bind(mainMod .. " + " .. "k", hl.dsp.focus({ direction = "up" }))
-
-hl.bind(mainMod .. " + " .. "j", hl.dsp.focus({ direction = "down" }))
-
-hl.bind(mainMod .. " + " .. "left", hl.dsp.focus({ direction = "left" }))
-
-hl.bind(mainMod .. " + " .. "right", hl.dsp.focus({ direction = "right" }))
-
-hl.bind(mainMod .. " + " .. "up", hl.dsp.focus({ direction = "up" }))
-
-hl.bind(mainMod .. " + " .. "down", hl.dsp.focus({ direction = "down" }))
-
+hl.bind(mainMod .. " + h", hl.dsp.focus({ direction = "left" }))
+hl.bind(mainMod .. " + l", hl.dsp.focus({ direction = "right" }))
+hl.bind(mainMod .. " + k", hl.dsp.focus({ direction = "up" }))
+hl.bind(mainMod .. " + j", hl.dsp.focus({ direction = "down" }))
+hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
+hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
+hl.bind(mainMod .. " + up", hl.dsp.focus({ direction = "up" }))
+hl.bind(mainMod .. " + down", hl.dsp.focus({ direction = "down" }))
 hl.bind(mainMod .. " + " .. 1, hl.dsp.focus({ workspace = 1 }))
-
 hl.bind(mainMod .. " + " .. 2, hl.dsp.focus({ workspace = 2 }))
-
 hl.bind(mainMod .. " + " .. 3, hl.dsp.focus({ workspace = 3 }))
-
 hl.bind(mainMod .. " + " .. 4, hl.dsp.focus({ workspace = 4 }))
-
 hl.bind(mainMod .. " + " .. 5, hl.dsp.focus({ workspace = 5 }))
-
 hl.bind(mainMod .. " + " .. 6, hl.dsp.focus({ workspace = 6 }))
-
 hl.bind(mainMod .. " + " .. 7, hl.dsp.focus({ workspace = 7 }))
-
 hl.bind(mainMod .. " + " .. 8, hl.dsp.focus({ workspace = 8 }))
-
 hl.bind(mainMod .. " + " .. 9, hl.dsp.focus({ workspace = 9 }))
-
 hl.bind(mainMod .. " + " .. 0, hl.dsp.focus({ workspace = 10 }))
-
 hl.bind(mainMod .. " + SHIFT " .. " + " .. 1, hl.dsp.window.move({ workspace = 1 }))
-
 hl.bind(mainMod .. " + SHIFT " .. " + " .. 2, hl.dsp.window.move({ workspace = 2 }))
-
 hl.bind(mainMod .. " + SHIFT " .. " + " .. 3, hl.dsp.window.move({ workspace = 3 }))
-
 hl.bind(mainMod .. " + SHIFT " .. " + " .. 4, hl.dsp.window.move({ workspace = 4 }))
-
 hl.bind(mainMod .. " + SHIFT " .. " + " .. 5, hl.dsp.window.move({ workspace = 5 }))
-
 hl.bind(mainMod .. " + SHIFT " .. " + " .. 6, hl.dsp.window.move({ workspace = 6 }))
-
 hl.bind(mainMod .. " + SHIFT " .. " + " .. 7, hl.dsp.window.move({ workspace = 7 }))
-
 hl.bind(mainMod .. " + SHIFT " .. " + " .. 8, hl.dsp.window.move({ workspace = 8 }))
-
 hl.bind(mainMod .. " + SHIFT " .. " + " .. 9, hl.dsp.window.move({ workspace = 9 }))
-
 hl.bind(mainMod .. " + SHIFT " .. " + " .. 0, hl.dsp.window.move({ workspace = 10 }))
-
 hl.bind(mainMod .. " + " .. "S", hl.dsp.workspace.toggle_special("magic"))
-
 hl.bind(mainMod .. " + SHIFT " .. " + " .. "S", hl.dsp.window.move({ workspace = "special:magic" }))
-
 hl.bind(mainMod .. " + " .. "mouse_down", hl.dsp.focus({ workspace = "e+1" }))
-
 hl.bind(mainMod .. " + " .. "mouse_up", hl.dsp.focus({ workspace = "e-1" }))
-
 hl.bind(mainMod .. " + " .. "mouse:272", hl.dsp.window.drag(), { mouse = true })
-
 hl.bind(mainMod .. " + " .. "mouse:273", hl.dsp.window.resize(), { mouse = true })
 
 -- bindl = , XF86AudioRaiseVolume, exec, volumectl -u up
-
 -- bindl = , XF86AudioLowerVolume, exec, volumectl -u down
-
 -- bindl = , XF86AudioMute, exec, volumectl toggle-mute
-
 -- bindl = , XF86MonBrightnessUp, exec, lightctl up
-
 -- bindl = , XF86MonBrightnessDown, exec, lightctl down
-
 hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next"), { locked = true })
-
 hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
-
 hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
-
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
-
 hl.bind(mainMod .. " + CTRL" .. " + " .. "S", hl.dsp.exec_cmd("hyprshot -m region"))
-
 hl.bind(mainMod .. " + SHIFT + CTRL" .. " + " .. "S", hl.dsp.exec_cmd("hyprshot -m output"))
-
 -- bind = mainMod SHIFT, L, exec, hyprlock
-
 hl.bind(mainMod .. " + SHIFT " .. " + " .. "P", hl.dsp.exec_cmd("pavuc"))
-
 hl.bind(mainMod .. " + SHIFT " .. " + " .. "M", hl.dsp.exec_cmd("element-desktop"))
-
 -- bind = mainMod SHIFT, E, exec, rofi -modi emoji -show emoji -kb-secondary-copy "" -kb-custom-1 Ctrl+c
