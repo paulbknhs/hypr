@@ -76,7 +76,7 @@ hl.window_rule({
 	no_initial_focus = true,
 })
 
-hl.window_rule({ match = { class = "prismlauncher" }, workspace = 4 })
+-- hl.window_rule({ match = { class = "prismlauncher" }, workspace = 4 })
 
 -- Minecraft & Console (Workspace + Float)
 hl.window_rule({
