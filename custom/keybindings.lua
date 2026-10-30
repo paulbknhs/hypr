@@ -5,14 +5,10 @@
 ---@module 'hl'
 
 local mainMod = "SUPER"
-hl.bind("SUPER" .. " + " .. "V", hl.dsp.exec_cmd("cliphist list| rofi -dmenu| cliphist decode| wl-copy"))
+-- hl.bind("SUPER" .. " + " .. "V", hl.dsp.exec_cmd("cliphist list| rofi -dmenu| cliphist decode| wl-copy"))
 local terminal = "kitty"
 local browser = "firefox"
 local fileManager = "thunar"
-local sudoFileManager = "sudo thunar"
-local menu = "~/.config/hypr/launcher_t3"
-local screenshot = "/home/paul/.config/rofi/applets/bin/screenshot.sh"
-local exit = "/home/paul/.config/rofi/applets/bin/powermenu.sh"
 
 -- fullscreen hyprland
 hl.bind(mainMod .. " + " .. "F", hl.dsp.window.fullscreen())
@@ -30,13 +26,7 @@ hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("neovide"))
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
-hl.bind(mainMod .. " + SHIFT + E", hl.dsp.exec_cmd("sudoFileManager"))
 hl.bind(mainMod .. " + C", hl.dsp.window.float())
-hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("noctalia msg panel-toggle launcher"))
-hl.bind(mainMod .. " + SHIFT + L", hl.dsp.exec_cmd("noctalia msg session lock"))
-hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.exec_cmd("noctalia msg panel-toggle session"))
-
--- bind = mainMod, D, exec, $menu
 hl.bind(mainMod .. " + h", hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + l", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + k", hl.dsp.focus({ direction = "up" }))
@@ -72,18 +62,10 @@ hl.bind(mainMod .. " + " .. "mouse_up", hl.dsp.focus({ workspace = "e-1" }))
 hl.bind(mainMod .. " + " .. "mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind(mainMod .. " + " .. "mouse:273", hl.dsp.window.resize(), { mouse = true })
 hl.bind(mainMod .. " + " .. "mouse:274", hl.dsp.exec_cmd("hyprctl keyword cursor:zoom_factor 3.0"), { mouse = true })
--- bindl = , XF86AudioRaiseVolume, exec, volumectl -u up
--- bindl = , XF86AudioLowerVolume, exec, volumectl -u down
--- bindl = , XF86AudioMute, exec, volumectl toggle-mute
--- bindl = , XF86MonBrightnessUp, exec, lightctl up
--- bindl = , XF86MonBrightnessDown, exec, lightctl down
 hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next"), { locked = true })
 hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
 hl.bind(mainMod .. " + CTRL" .. " + " .. "S", hl.dsp.exec_cmd("hyprshot -m region"))
 hl.bind(mainMod .. " + SHIFT + CTRL" .. " + " .. "S", hl.dsp.exec_cmd("hyprshot -m output"))
--- bind = mainMod SHIFT, L, exec, hyprlock
 hl.bind(mainMod .. " + SHIFT " .. " + " .. "P", hl.dsp.exec_cmd("pavuc"))
-hl.bind(mainMod .. " + SHIFT " .. " + " .. "M", hl.dsp.exec_cmd("element-desktop"))
--- bind = mainMod SHIFT, E, exec, rofi -modi emoji -show emoji -kb-secondary-copy "" -kb-custom-1 Ctrl+c

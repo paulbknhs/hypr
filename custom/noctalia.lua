@@ -14,30 +14,16 @@ hl.layer_rule({
 	blur_popups = true,
 })
 
-local ipc = "qs -c noctalia-shell ipc call"
+hl.bind(mainMod .. " + " .. "D", hl.dsp.exec_cmd("noctalia msg panel-toggle launcher"))
+hl.bind(mainMod .. " + " .. "V", hl.dsp.exec_cmd("noctalia msg panel-toggle clipboard"))
+hl.bind("ALT" .. " + " .. "Tab", hl.dsp.exec_cmd("noctalia msg window-switcher"))
+hl.bind(mainMod .. " + SHIFT" .. " + " .. "Q", hl.dsp.exec_cmd("noctalia msg sessionMenu toggle"))
+hl.bind(mainMod .. " + SHIFT + L", hl.dsp.exec_cmd("noctalia msg session lock"))
+hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.exec_cmd("noctalia msg panel-toggle session"))
 
-hl.bind(mainMod .. " + " .. "D", hl.dsp.exec_cmd("qs -c noctalia-shell ipc call launcher toggle"))
-
--- bind = mainMod, V, exec, $ipc launcher clipboard
-
-hl.bind("ALT" .. " + " .. "Tab", hl.dsp.exec_cmd("qs -c noctalia-shell ipc call launcher windows"))
-
-hl.bind(mainMod .. " + SHIFT" .. " + " .. "L", hl.dsp.exec_cmd("qs -c noctalia-shell ipc call lockScreen lock"))
-
-hl.bind(mainMod .. " + SHIFT" .. " + " .. "E", hl.dsp.exec_cmd("qs -c noctalia-shell ipc call launcher emoji"))
-
-hl.bind(mainMod .. " + SHIFT" .. " + " .. "Q", hl.dsp.exec_cmd("qs -c noctalia-shell ipc call sessionMenu toggle"))
-
-hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("qs -c noctalia-shell ipc call volume increase"), { locked = true })
-
-hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("qs -c noctalia-shell ipc call volume decrease"), { locked = true })
-
-hl.bind("XF86AudioMute", hl.dsp.exec_cmd("qs -c noctalia-shell ipc call volume muteOutput"), { locked = true })
-
-hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("qs -c noctalia-shell ipc call brightness increase"), { locked = true })
-
-hl.bind(
-	"XF86MonBrightnessDown",
-	hl.dsp.exec_cmd("qs -c noctalia-shell ipc call brightness decrease"),
-	{ locked = true }
-)
+-- Audio & Brightness control
+hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("volumectl -u up"))
+hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("volumectl -u down"))
+hl.bind("XF86AudioMute", hl.dsp.exec_cmd("volumectl toggle-mute"))
+hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("lightctl up"))
+hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("lightctl down"))
