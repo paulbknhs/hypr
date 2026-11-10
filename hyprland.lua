@@ -47,7 +47,7 @@ hl.config({
 		},
 		resize_on_border = true,
 		allow_tearing = false,
-		layout = "master",
+		layout = "scrolling",
 	},
 	decoration = {
 		rounding = 2,
@@ -56,7 +56,7 @@ hl.config({
 		shadow = {
 			enabled = true,
 			range = 4,
-			render_power = 6,
+			render_power = 4,
 			color = "rgba(1a1a1aee)",
 		},
 		blur = {

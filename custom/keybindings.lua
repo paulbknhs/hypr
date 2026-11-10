@@ -69,3 +69,4 @@ hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true 
 hl.bind(mainMod .. " + CTRL" .. " + " .. "S", hl.dsp.exec_cmd("hyprshot -m region"))
 hl.bind(mainMod .. " + SHIFT + CTRL" .. " + " .. "S", hl.dsp.exec_cmd("hyprshot -m output"))
 hl.bind(mainMod .. " + SHIFT " .. " + " .. "P", hl.dsp.exec_cmd("pavuc"))
+hl.bind("ALT + SPACE", hl.dsp.exec_cmd("noctalia msg panel-toggle nightwatch75/file-search:panel"))
