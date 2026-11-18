@@ -70,3 +70,4 @@ hl.bind(mainMod .. " + CTRL" .. " + " .. "S", hl.dsp.exec_cmd("hyprshot -m regio
 hl.bind(mainMod .. " + SHIFT + CTRL" .. " + " .. "S", hl.dsp.exec_cmd("hyprshot -m output"))
 hl.bind(mainMod .. " + SHIFT " .. " + " .. "P", hl.dsp.exec_cmd("pavuc"))
 hl.bind("ALT + SPACE", hl.dsp.exec_cmd("noctalia msg panel-toggle nightwatch75/file-search:panel"))
+hl.bind("code:455", hl.dsp.exec_cmd("noctalia msg panel-toggle elijaharch/wl-screen-mirror:controls"))
